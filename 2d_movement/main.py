@@ -2,9 +2,6 @@ import json
 import random
 
 def main():
-    data1 = {"x": 1}
-    data2 = {"y": 2}
-
     with open("2d_movement/file.jsonl", "w") as f:
         # the first handwritten one
         hand_written = {
@@ -49,10 +46,10 @@ def main():
                             steps.append(f"take {action_magnitude} steps backward")
                     case 3: # turn left
                         current_direction = directions[(directions.index(current_direction) - 1) % len(directions)]
-                        steps.append(f"turn left")
+                        steps.append(f"turn 90 degrees left")
                     case 4: # turn right
                         current_direction = directions[(directions.index(current_direction) + 1) % len(directions)]
-                        steps.append(f"turn right")
+                        steps.append(f"turn 90 degrees right")
 
             line = {
                 "input": [
@@ -62,7 +59,7 @@ def main():
                     },
                     {
                         "role": "user",
-                        "content": "EXERCISE: If you " + ", ".join(steps) + f", what coordinate are you at?"
+                        "content": "EXERCISE: If you " + ", then ".join(steps) + f", what coordinate are you at?"
                     }
                 ],
                 "ideal": str(current)

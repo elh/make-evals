@@ -1,2 +1,2 @@
-# make-evals
-workshop for openai/evals
+# make-evals 🧪
+My workspace for writing openai/evals
