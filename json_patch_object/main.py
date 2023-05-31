@@ -105,7 +105,7 @@ def main():
                 "input": [
                     {
                         "role": "system",
-                        "content": f"Return a JSON Patch array with no additional commentary. Return the minimal set of JSON Patch operations required; do not return ineffective or redundant operations. Return the JSON Patch array on a single line in the following format: [{{\"op\": \"replace\", \"path\": \"/95d90676-2b2e-4152-9b48-5238ca7019a9/38184eb5-03b9-4f3a-9546-c76d4bc141ef\", \"value\": 385}}]"
+                        "content": f"Return a JSON Patch array with no additional commentary.\nReturn the minimal set of JSON Patch operations required; do not return ineffective or redundant operations.\nJSON Patch operations should be JSON objects with the keys \"op\", \"path\", and \"value\".\n\"op\" can be one of \"add\", \"remove\", or \"replace\".\n\"path\" is a JSON Pointer to the key in the base JSON to which the operation should be applied.\nIf the operation is \"add\" or \"replace\", \"value\" is the value to be added or replaced.\nIf the operation is \"remove\", \"value\" should be not included.\nReturn the JSON Patch array on a single line in the following format: [{{\"op\": \"replace\", \"path\": \"/95d90676-2b2e-4152-9b48-5238ca7019a9/38184eb5-03b9-4f3a-9546-c76d4bc141ef\", \"value\": 385}}]"
                     },
                     {
                         "role": "user",
