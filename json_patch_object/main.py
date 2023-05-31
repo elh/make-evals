@@ -90,6 +90,7 @@ def main():
             key_format = args.key_format
 
             d = generate_dict(4, lambda: generate_dict(4, lambda: generate_dict(4, lambda: generate_value())))
+            # d = generate_dict(2, lambda: generate_dict(2, lambda: generate_dict(2, lambda: generate_value())))
             # print(json.dumps(d, indent=2))
 
             path = []
